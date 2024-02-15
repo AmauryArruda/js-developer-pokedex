@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+
 }
 
 .normal {
@@ -11,71 +13,89 @@
 }
 
 .grass {
-    background-color: #77c850;
+    position: relative;
+    background: rgb(99, 196, 52);
+    background: linear-gradient(0deg, rgba(99, 196, 52, 1) 0%, rgba(70, 154, 30, 1) 59%);
 }
 
 .fire {
-    background-color: #ee7f30;
+    background: rgb(238, 127, 48);
+    background: linear-gradient(0deg, rgba(238, 127, 48, 1) 0%, rgba(227, 57, 18, 1) 59%);
 }
 
 .water {
-    background-color: #678fee;
+    background: rgb(103, 143, 238);
+    background: linear-gradient(0deg, rgba(103, 143, 238, 1) 0%, rgba(3, 79, 172, 1) 59%);
 }
 
 .electric {
-    background-color: #f7cf2e;
+    background: rgb(247, 207, 46);
+    background: linear-gradient(0deg, rgba(247, 207, 46, 1) 0%, rgba(195, 156, 0, 1) 59%);
 }
 
 .ice {
-    background-color: #98d5d7;
+    background: rgb(152, 213, 215);
+    background: linear-gradient(0deg, rgba(152, 213, 215, 1) 0%, rgba(60, 165, 168, 1) 59%);
 }
 
 .ground {
-    background-color: #dfbf69;
+    background: rgb(223, 191, 105);
+    background: linear-gradient(0deg, rgba(223, 191, 105, 1) 0%, rgba(176, 139, 41, 1) 59%);
 }
 
 .flying {
-    background-color: #a98ff0;
+    background: rgb(169, 143, 240);
+    background: linear-gradient(0deg, rgba(169, 143, 240, 1) 0%, rgba(112, 81, 195, 1) 59%);
 }
 
 .poison {
-    background-color: #a040a0;
+    background: rgb(160, 64, 160);
+    background: linear-gradient(0deg, rgba(160, 64, 160, 1) 0%, rgba(134, 21, 134, 1) 59%);
 }
 
 .fighting {
-    background-color: #bf3029;
+    background: rgb(191, 48, 41);
+    background: linear-gradient(0deg, rgba(191, 48, 41, 1) 0%, rgba(131, 7, 1, 1) 59%);
 }
 
 .psychic {
-    background-color: #f65687;
+    background: rgb(246, 86, 135);
+    background: linear-gradient(0deg, rgba(246, 86, 135, 1) 0%, rgba(159, 26, 67, 1) 59%);
 }
 
 .dark {
-    background-color: #725847;
+    background: rgb(114, 88, 71);
+    background: linear-gradient(0deg, rgba(114, 88, 71, 1) 0%, rgba(105, 64, 38, 1) 59%);
 }
 
 .rock {
-    background-color: #b8a137;
+    background: rgb(184, 161, 55);
+    background: linear-gradient(0deg, rgba(184, 161, 55, 1) 0%, rgba(133, 114, 30, 1) 59%);
 }
 
 .bug {
-    background-color: #a8b720;
+    background: rgb(168, 183, 32);
+    background: linear-gradient(0deg, rgba(168, 183, 32, 1) 0%, rgba(131, 143, 21, 1) 59%);
 }
 
 .ghost {
-    background-color: #6e5896;
+    background: rgb(110, 88, 150);
+    background: linear-gradient(0deg, rgba(110, 88, 150, 1) 0%, rgba(75, 55, 112, 1) 59%);
 }
 
 .steel {
-    background-color: #b9b7cf;
+    background: rgb(185, 183, 207);
+    background: linear-gradient(0deg, rgba(185, 183, 207, 1) 0%, rgba(143, 137, 203, 1) 59%);
 }
 
 .dragon {
-    background-color: #6f38f6;
+    background: rgb(111, 56, 246);
+    background: linear-gradient(0deg, rgba(111, 56, 246, 1) 0%, rgba(61, 6, 196, 1) 59%);
 }
 
 .fairy {
-    background-color: #f9aec7;
+    background: rgb(249, 174, 199);
+    background: linear-gradient(0deg, rgba(249, 174, 199, 1) 0%, rgba(232, 99, 143, 1) 59%);
 }
 
 .pokemon {
@@ -84,17 +104,30 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
+    transition: .4s ease;
 }
+
+
+
+
+
+.pokemon:hover {
+    transform: scale(1.02);
+}
+
 
 .pokemon .number {
     color: #000;
     opacity: .3;
     text-align: right;
-    font-size: .625rem;
+    font-size: 1rem;
 }
 
 .pokemon .name {
     text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #fff;
     margin-bottom: .25rem;
 }
@@ -113,10 +146,12 @@
 }
 
 .pokemon .detail .types .type {
-    color: #fff;
+    color: #ffffff;
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
+    font-weight: 300;
+    text-transform: uppercase;
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
@@ -133,18 +168,38 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .pagination button {
-    padding: .25rem .5rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
     margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    background-color: #6c79db;
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #9c0000;
+    background-color: #ffffff;
     border: none;
     border-radius: 1rem;
+    transition: all .4s ease;
+    display: flex;
 }
+
+.pagination button:hover {
+    color: #fff;
+    background-color: #9c0000;
+    transform: scale(0.9);
+}
+
+.pagination button img {
+    height: 24px;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
